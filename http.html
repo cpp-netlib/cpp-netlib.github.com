@@ -85,8 +85,8 @@ described in the directives section:</p>
 request looks trivially simple:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">using</span> <span class="k">namespace</span> <span class="n">boost</span><span class="o">::</span><span class="n">network</span><span class="p">;</span>
 <span class="n">http</span><span class="o">::</span><span class="n">client</span> <span class="n">client</span><span class="p">;</span>
-<span class="n">http</span><span class="o">::</span><span class="n">request</span> <span class="n">request</span><span class="p">(</span><span class="s">&quot;http://www.boost.org/&quot;</span><span class="p">);</span>
-<span class="n">http</span><span class="o">::</span><span class="n">response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<span class="n">http</span><span class="o">::</span><span class="n">client</span><span class="o">::</span><span class="n">request</span> <span class="n">request</span><span class="p">(</span><span class="s">&quot;http://www.boost.org/&quot;</span><span class="p">);</span>
+<span class="n">http</span><span class="o">::</span><span class="n">client</span><span class="o">::</span><span class="n">response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Accessing data from <tt class="docutils literal"><span class="pre">http::response</span></tt> is also done using directives.
@@ -162,7 +162,7 @@ HTTP OK response (200).</p>
 </div>
 <div class="section" id="http-uri">
 <h2>HTTP URI<a class="headerlink" href="#http-uri" title="Permalink to this headline">¶</a></h2>
-<p>Firstly, cpp-netlib provides a specialization and <tt class="docutils literal"><span class="pre">typedef</span></tt> for an
+<p><tt class="xref py py-mod docutils literal"><span class="pre">cpp-netlib</span></tt> provides a specialization and <tt class="docutils literal"><span class="pre">typedef</span></tt> for an
 HTTP URI:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">namespace</span> <span class="n">http</span> <span class="p">{</span>
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">basic_uri</span><span class="p">;</span>
