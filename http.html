@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>HTTP implementation &mdash; The C++ Network Library v0.7 documentation</title>
+    <title>HTTP implementation &mdash; cpp-netlib v0.7 documentation</title>
     <link rel="stylesheet" href="_static/cpp-netlib.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="The C++ Network Library v0.7 documentation" href="index.html" />
+    <link rel="top" title="cpp-netlib v0.7 documentation" href="index.html" />
     <link rel="up" title="An in-depth look at the cpp-netlib" href="in_depth.html" />
     <link rel="next" title="Techniques" href="techniques.html" />
     <link rel="prev" title="The URI template" href="uri.html" /> 
@@ -30,9 +30,9 @@
   <body>
 
     <div class="document">
-  <div id="custom-doc" class="yui-t6">
+  <div id="custom-doc" class="yui-t4">
     <div id="hd">
-      <h1><a href="index.html">The C++ Network Library v0.7 documentation</a></h1>
+      <h1><a href="index.html">cpp-netlib v0.7 documentation</a></h1>
       <div id="global-nav">
         <a title="Home page" href="index.html">Home</a>  |
         <a title="Table of contents" href="contents.html">Table of contents</a>  |
@@ -85,8 +85,8 @@ described in the directives section:</p>
 request looks trivially simple:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">using</span> <span class="k">namespace</span> <span class="n">boost</span><span class="o">::</span><span class="n">network</span><span class="p">;</span>
 <span class="n">http</span><span class="o">::</span><span class="n">client</span> <span class="n">client</span><span class="p">;</span>
-<span class="n">http</span><span class="o">::</span><span class="n">request</span> <span class="n">request</span><span class="p">(</span><span class="s">&quot;http://www.boost.org/&quot;</span><span class="p">);</span>
-<span class="n">http</span><span class="o">::</span><span class="n">response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
+<span class="n">http</span><span class="o">::</span><span class="n">client</span><span class="o">::</span><span class="n">request</span> <span class="n">request</span><span class="p">(</span><span class="s">&quot;http://www.boost.org/&quot;</span><span class="p">);</span>
+<span class="n">http</span><span class="o">::</span><span class="n">client</span><span class="o">::</span><span class="n">response</span> <span class="n">response</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>Accessing data from <tt class="docutils literal"><span class="pre">http::response</span></tt> is also done using directives.
@@ -162,7 +162,7 @@ HTTP OK response (200).</p>
 </div>
 <div class="section" id="http-uri">
 <h2>HTTP URI<a class="headerlink" href="#http-uri" title="Permalink to this headline">¶</a></h2>
-<p>Firstly, cpp-netlib provides a specialization and <tt class="docutils literal"><span class="pre">typedef</span></tt> for an
+<p><tt class="xref py py-mod docutils literal"><span class="pre">cpp-netlib</span></tt> provides a specialization and <tt class="docutils literal"><span class="pre">typedef</span></tt> for an
 HTTP URI:</p>
 <div class="highlight-c++"><div class="highlight"><pre><span class="k">namespace</span> <span class="n">http</span> <span class="p">{</span>
 <span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span> <span class="k">class</span> <span class="nc">basic_uri</span><span class="p">;</span>
@@ -226,7 +226,7 @@ provided.</p>
   <h3>You are here:</h3>
   <ul>
       <li>
-        <a href="index.html">The C++ Network Library v0.7 documentation</a>
+        <a href="index.html">cpp-netlib v0.7 documentation</a>
         
           <ul><li><a href="in_depth.html">An in-depth look at the <tt class="docutils literal docutils literal"><span class="pre">cpp-netlib</span></tt></a>
         

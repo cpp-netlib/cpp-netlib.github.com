@@ -7,7 +7,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>The message template &mdash; The C++ Network Library v0.7 documentation</title>
+    <title>The message template &mdash; cpp-netlib v0.7 documentation</title>
     <link rel="stylesheet" href="_static/cpp-netlib.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -22,7 +22,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="The C++ Network Library v0.7 documentation" href="index.html" />
+    <link rel="top" title="cpp-netlib v0.7 documentation" href="index.html" />
     <link rel="up" title="An in-depth look at the cpp-netlib" href="in_depth.html" />
     <link rel="next" title="The URI template" href="uri.html" />
     <link rel="prev" title="An in-depth look at the cpp-netlib" href="in_depth.html" /> 
@@ -30,9 +30,9 @@
   <body>
 
     <div class="document">
-  <div id="custom-doc" class="yui-t6">
+  <div id="custom-doc" class="yui-t4">
     <div id="hd">
-      <h1><a href="index.html">The C++ Network Library v0.7 documentation</a></h1>
+      <h1><a href="index.html">cpp-netlib v0.7 documentation</a></h1>
       <div id="global-nav">
         <a title="Home page" href="index.html">Home</a>  |
         <a title="Table of contents" href="contents.html">Table of contents</a>  |
@@ -76,7 +76,7 @@ protocol to protocol (also sometimes referred to as payload).</li>
 </blockquote>
 <p>This division is purely logical &#8211; in the underlying implementation,
 the message type can choose to have different means of storing the
-data, dependinn on the type used to tag the message. This section
+data, depending on the type used to tag the message. This section
 covers the <a class="reference internal" href="#message-concept">Message Concept</a> as well as the <a class="reference internal" href="#basic-message">basic_message</a>
 implementation.</p>
 <div class="section" id="message-concept">
@@ -91,6 +91,8 @@ properties of messages.</p>
 <col class="field-body" />
 <tbody valign="top">
 <tr class="field"><th class="field-name">M:</th><td class="field-body">The message type.</td>
+</tr>
+<tr class="field"><th class="field-name">H:</th><td class="field-body">A headers container type.</td>
 </tr>
 <tr class="field"><th class="field-name">m,n:</th><td class="field-body">An instance of <strong>M</strong>.</td>
 </tr>
@@ -138,8 +140,9 @@ properties of messages.</p>
 <td>Retrieve the destination of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">headers(m);</span></tt></td>
-<td><tt class="docutils literal"><span class="pre">Range&lt;Pair&lt;S,S&gt;&gt;</span></tt></td>
-<td>Get the range of headers of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+<td>unspecified</td>
+<td>Get the range of headers of <tt class="docutils literal"><span class="pre">m</span></tt>. The
+result should be convertible to <tt class="docutils literal"><span class="pre">H</span></tt></td>
 </tr>
 <tr><td><tt class="docutils literal"><span class="pre">body(m);</span></tt></td>
 <td>unspecified</td>
@@ -149,7 +152,15 @@ properties of messages.</p>
 <td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
 <td>Set the source of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
+<tr><td><tt class="docutils literal"><span class="pre">source(m,s);</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
+<td>Set the source of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+</tr>
 <tr><td><tt class="docutils literal"><span class="pre">m</span> <span class="pre">&lt;&lt;</span> <span class="pre">destination(s);</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
+<td>Set the destination of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">destination(m,s);</span></tt></td>
 <td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
 <td>Set the destination of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
@@ -157,11 +168,23 @@ properties of messages.</p>
 <td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
 <td>Add a header to <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
+<tr><td><tt class="docutils literal"><span class="pre">add_header(m,</span> <span class="pre">k,</span> <span class="pre">v);</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
+<td>Add a header to <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+</tr>
 <tr><td><tt class="docutils literal"><span class="pre">m</span> <span class="pre">&lt;&lt;</span> <span class="pre">remove_header(k);</span></tt></td>
 <td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
 <td>Remove a header from <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
+<tr><td><tt class="docutils literal"><span class="pre">remove_header(m,</span> <span class="pre">k);</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
+<td>Remove a header from <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+</tr>
 <tr><td><tt class="docutils literal"><span class="pre">m</span> <span class="pre">&lt;&lt;</span> <span class="pre">body(s);</span></tt></td>
+<td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
+<td>Set the body of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
+</tr>
+<tr><td><tt class="docutils literal"><span class="pre">body(m,s);</span></tt></td>
 <td><tt class="docutils literal"><span class="pre">M</span> <span class="pre">&amp;</span></tt></td>
 <td>Set the body of <tt class="docutils literal"><span class="pre">m</span></tt>.</td>
 </tr>
@@ -233,7 +256,7 @@ POD type.</p>
   <h3>You are here:</h3>
   <ul>
       <li>
-        <a href="index.html">The C++ Network Library v0.7 documentation</a>
+        <a href="index.html">cpp-netlib v0.7 documentation</a>
         
           <ul><li><a href="in_depth.html">An in-depth look at the <tt class="docutils literal docutils literal docutils literal docutils literal docutils literal"><span class="pre">cpp-netlib</span></tt></a>
         
