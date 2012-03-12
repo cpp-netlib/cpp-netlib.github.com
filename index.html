@@ -6,7 +6,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+
     <title>Getting cpp-netlib &mdash; cpp-netlib v0.9.3</title>
     <link rel="stylesheet" href="_static/cpp-netlib.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -61,7 +61,7 @@
       <div id="yui-main">
         <div class="yui-b">
           <div class="yui-g" id="index">
-            
+
   <p class="rubric" id="index">Straightforward network programming in modern C++</p>
 <div class="section" id="cpp-netlib-getting-cpp-netlib">
 <h1>Getting cpp-netlib<a class="headerlink" href="#cpp-netlib-getting-cpp-netlib" title="Permalink to this headline">¶</a></h1>
@@ -111,8 +111,8 @@ The client is as simple as this:</p>
 <span class="n">client</span><span class="o">::</span><span class="n">request</span> <span class="n">request_</span><span class="p">(</span><span class="s">&quot;http://127.0.0.1:8000/&quot;</span><span class="p">);</span>
 <span class="n">request_</span> <span class="o">&lt;&lt;</span> <span class="n">header</span><span class="p">(</span><span class="s">&quot;Connection&quot;</span><span class="p">,</span> <span class="s">&quot;close&quot;</span><span class="p">);</span>
 <span class="n">client</span> <span class="n">client_</span><span class="p">;</span>
-<span class="n">client</span><span class="o">::</span><span class="n">response</span> <span class="n">response_</span> <span class="o">=</span> <span class="n">client_</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request</span><span class="p">);</span>
-<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">body</span> <span class="o">=</span> <span class="n">body</span><span class="p">(</span><span class="n">response_</span><span class="p">);</span>
+<span class="n">client</span><span class="o">::</span><span class="n">response</span> <span class="n">response_</span> <span class="o">=</span> <span class="n">client_</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">request_</span><span class="p">);</span>
+<span class="n">std</span><span class="o">::</span><span class="n">string</span> <span class="n">body_</span> <span class="o">=</span> <span class="n">body</span><span class="p">(</span><span class="n">response_</span><span class="p">);</span>
 </pre></div>
 </div>
 <p>And the corresponding server code is listed below:</p>
@@ -166,9 +166,9 @@ other network protocols.</p>
           </div>
         </div>
       </div>
-      
-        
-      
+
+
+
     </div>
 
     <div id="ft">
