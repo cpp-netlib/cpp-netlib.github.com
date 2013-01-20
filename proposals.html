@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cpp-netlib: Proposals</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="static/cpp-netlib.css" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target=".cpp-netlib-docs-sidebar">
+    <div id="wrap">
+      <div class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar">
+        <div class="container">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">cpp-netlib</a></li>
+            <li><a href="process.html">Development Process</a></li>
+            <li><a href="style-guide.html">Style Guide</a></li>
+            <li class="active"><a href="proposals.html">Proposals</a></li>
+          </ul>
+        </div>
+      </div>
+      <header class="jumbotron subhead">
+        <div class="container">
+          <h1>Proposals</h1>
+          <p class="lead">Getting new libraries into <code>cpp-netlib.</code></p>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="span2 cpp-netlib-docs-sidebar">
+            <ul class="nav nav-list" data-spy="affix" data-offset-top="150">
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#preparation">Preparation</a></li>
+              <li><a href="#discussion">Discussion</a></li>
+              <li><a href="#collaboration">Collaboration</a></li>
+              <li><a href="#inclusion">Inclusion</a></li>
+            </ul>
+          </div>
+          <div class="span9">
+            <section id="overview">
+              <div class="page-header">
+                <h1>Overview</h1>
+              </div>
+              <p>This document outlines how we get new libraris accepted as
+              part of <code>cpp-netlib</code></p>
+            </section>
+            <section id="preparation">
+              <div class="page-header">
+                <h1>Preparation</h1>
+              </div>
+              <p>The maintainers and members of the community generally like
+              seeing well-prepared proposals for libraries to be included. The
+              reason for this is so that we waste as little time from everyone
+              who's going to be involved in the process as possible. Therefore
+              we ask that before you bring an idea to the table, please prepare
+              the following information (even only when sending an email to the
+              mailing list).</p>
+              <ul>
+              <li><strong>Problem Statement.</strong> It's surprisingly hard to
+              evaluate proposals without a problem being solved. To make it
+              easier to evaluate proposals, please define what problem you're
+              intending to solve with the library you're proposing to include
+              (if it's already there, that's good &mdash; if it's going to be
+              developed from scratch, it's easier to know what the problem is
+              before we start).</li>
+              <li><strong>User Stories.</strong> We generally like to evaluate
+              libraries based on how easy it is for users to use. It is then
+              paramout that you present a vision on how users of the library
+              will be using the library. Examples of user code would be most
+              appreciated.</li>
+              <li><strong>Scope and Goals.</strong> Knowing what the scope of
+              your library will be is better generally so that interested
+              parties who want to help in development and maintenance can see
+              whether they can help or whether you can do it all on your own.
+              Knowing what you want to accomplish and sharing those with the
+              community of users and developers gives everyone the same ideas
+              as to what to expect.</li>
+              <li><strong>Design Documentation.</strong> API design is hard,
+              and having a high level idea of how things will be implemented in
+              your library makes it easier to see the bigger picture. This
+              document need not be too formal but it should be something
+              self-contained and easily modified/commented-on for a lower
+              collaboration bar. Please do not put your design document as an
+              email &mdash; a Wiki document, shared Google Document, or a
+              GitHub repository is much easier to discuss than an email.</li>
+              </ul>
+              <p>Once you have these things, fire off an email to the mailing
+              list citing the above four preparation sections.<p>
+            </section>
+            <section id="discussion">
+              <div class="page-header">
+                <h1>Discussion</h1>
+              </div>
+              <p>All discussions should occur in the mailing list for issues
+              not related to the design documentation. If the design doc is a
+              shared Google Document comments will be made on the document
+              itself. For everything else, the discussions should be done on
+              the mailing list.</p>
+              <p>The discussion will be considered concluded when all the
+              maintainers of the library agree that the proposal makes sense
+              and that it's something the community wants to have in the
+              library. The process will be tracked by a formal survey on the
+              mailing list run by one of the maintainers.</p>
+              <p>Once everybody's convinced that things should move forward,
+              then maintainers and interested contributors hunker down to start
+              collaborating on the development of the library.</p>
+            </section>
+            <section id="collaboration">
+              <div id="page-header">
+                <h1>Collaboration</h1>
+              </div>
+              <p>The collaboration process is intended to be much simpler: all
+              discussions on progress and questions to clarify happen on the
+              mailing list. Matters affecting progress &mdash; developers
+              missing in action, thorny implementation details, blockers, and
+              style questions should be discussed all in the open. We encourage
+              this so that everyone in the community is involved in the process
+              where we exclude nobody's opinion and contributions.</p>
+              <p>As far as development is concerned, there are two main ways of
+              getting the development done. Each one has its merits so we
+              present both.</p>
+              <h2>Fork of cpp-netlib</h2>
+              <p>The fork process is straight-forward &mdash; whoever proposed
+              the library and those who have pledged to contribute to the
+              implementation shall fork the main repository and develop in
+              parallel as the main repository. They can send progress reports
+              to the main developer list and have the partially complete work
+              merged into the master branch as it gets completed. All changes
+              can be isolated to an external fork where changes are meant to be
+              integrated before being submitted in bulk to the main repo as a
+              single PR.</p>
+              <p>This process effectively promotes whomever is driving and
+              owning the process as a maintainer of cpp-netlib. The downside to
+              this is that it's a lot of responsibility and may be time
+              consuming.</p>
+              <h2>Submodule to cpp-netlib</h2>
+              <p>The submodule approach is much more decoupled and allows for
+              having the implemented library be as stand-alone as possible.
+              Some libraries in cpp-netlib are already submodules and are
+              maintained separately by the corresponding maintainer.</p>
+              <p>The problem with this approach is that coordinating breaking
+              changes on multiple interacting submodules will be much harder.
+              It also makes the release/development process much more
+              cumbersome than the fork model. It also makes it harder to
+              enforce the style guide and development processes on the
+              submodule.</p>
+              <h2>Preferred Mode</h2>
+              <p>The preferred mode of development is the fork model, where
+              coordination is much closer and much more explicit. It also
+              allows the maintainers to easily cut releases and maintain a
+              single repository unto which all changes and history can be
+              kept.</p>
+              <p>Only in rare circumstances will a submodule actually be
+              preferred &mdash; for instance, if the project has already been
+              in existence before being accepted into <code>cpp-netlib</code>
+              or if it's made sufficiently stand-alone for purposes of
+              inclusion into the standard library.</p>
+            </section>
+            <section id="inclusion">
+              <div class="page-header">
+                <h1>Inclusion</h1>
+              </div>
+              <p>Inclusion entails three specific things which will
+              differentiate any other library from an accepted
+              <code>cpp-netlib</code> library.</p>
+              <ul>
+              <li><strong>Maintainership.</strong> All current maintainers of
+              <code>cpp-netlib</code> get maintainership over the library
+              that's accepted, and the proposer and main developers of the
+              library become maintainers of <code>cpp-netlib</code> as well. We
+              usually defer library-specific issues to the main library
+              maintainer/developer but in case of whole-library and community
+              decisions all maintainers get the same responibilities.</li>
+              <li><strong>Support.</strong> Any included library shall be
+              supported by the community and maintainers until it is either
+              removed or retired.</li>
+              <li><strong>Distribution.</strong> Any library included into
+              <code>cpp-netlib</code> shall be distributed as part of the main
+              distribution.
+              </ul>
+              <p>On the note about maintainership &mdash; once someone is
+              promoted to maintainer of cpp-netlib, that person gets
+              administrative rights to the project repository. In the event
+              that someone becomes inactive or relinquishes the role, only then
+              will that person be considered an ex-maintainer.</p>
+              <p>This means, once someone is deemed a maintainer, he'll always
+              be considered a maintainer unless he becomes inactive or
+              relinquishes that role.</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <p class="muted credit">Copyright 2012 Dean Michael Berris; Glyn
+        Matthews; Google, Inc.</p>
+        <p class="muted credit">Distributed under the Boost Software License,
+        Version 1.0. (See accompanying file <a
+        href="LICENSE_1_0.txt">LICENSE_1_0.txt</a> or copy at <a
+        href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
