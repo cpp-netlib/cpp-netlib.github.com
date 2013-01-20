@@ -1,0 +1,7 @@
+.affix { top: 10px; width: 110px; }
+.jumbotron { background: #FFA800; padding-top: 40px; }
+.jumbotron .container { position: relative; z-index: 2; }
+.subhead { text-align: left; 1px solid #FFA800; }
+.subhead h1 { font-size: 60px; padding-bottom: 10px; }
+.subhead p { margin-bottom: 20px; }
+.footer { background: lightgrey; padding-top: 40px; margin-top: 30px; text-align: center; }
