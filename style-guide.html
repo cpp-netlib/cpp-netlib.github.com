@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>cpp-netlib: Style Guide</title>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="static/cpp-netlib.css" rel="stylesheet">
+  </head>
+  <body data-spy="scroll" data-target=".cpp-netlib-docs-sidebar">
+    <div id="wrap">
+      <div class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar">
+        <div class="container">
+          <ul class="nav">
+            <li><a class="brand" href="index.html">cpp-netlib</a></li>
+            <li><a href="process.html">Development Process</a></li>
+            <li class="active"><a href="style-guide.html">Style Guide</a></li>
+            <li><a href="proposals.html">Proposals</a></li>
+          </ul>
+        </div>
+      </div>
+      <header class="jumbotron subhead">
+        <div class="container">
+          <h1>Development Process</h1>
+          <p class="lead">How we get things done.</p>
+        </div>
+      </header>
+      <div class="container">
+        <div class="row">
+          <div class="span2 cpp-netlib-docs-sidebar">
+            <ul class="nav nav-list" data-spy="affix" data-offset-top="150">
+              <li><a href="#overview">Overview</a></li>
+              <li><a href="#formatting">Formatting</a></li>
+              <li><a href="#naming">Naming</a></li>
+              <li><a href="#features">Features</a></li>
+              <li><a href="#organization">Organization</a></li>
+            </ul>
+          </div>
+          <div class="span9">
+            <section id="overview">
+              <div class="page-header">
+                <h1>Overview</h1>
+              </div>
+              <p>This is the style guide for the cpp-netlib project. We strive
+              for consistency throughout the codebase to make it easier for
+              developers and users to understand the code.</p>
+              <p>The style guide is not exhaustive and is subject to change
+              based on community agreement. If you have questions or
+              clarifications to the contents of the style guide, get involved
+              in the discussion at <a
+              href="https://groups.google.com/group/cpp-netlib"
+              target="_blank">https://groups.google.com/group/cpp-netlib</a>.</p>
+            </section>
+            <section id="formatting">
+              <div class="page-header">
+                <h1>Formatting</h1>
+              </div>
+              <p>We enforce the formatting rules prescribed by the Google Style
+              Guide as implemented by the clang-format tool.</p>
+              <dl>
+              <dt id="spaces">Spaces vs Tabs</dt>
+              <dd>Use spaces instead of tab characters.</dd>
+              <dt id="indents">Indents</dt>
+              <dd>Block indents two spaces, arguments to function calls indent 4 spaces from the start of the function name.</dd>
+              <dt id="namespaces">Namespaces</dt>
+              <dd>Namespaces do not start indent contexts.</dd>
+              <dt id="braces">Braces</dt>
+              <dd>Curly braces should be on the same line as function, namespace, class, enum, and loop declarations.</dd>
+              <dt id="parentheses">Parentheses</dt>
+              <dd>There should be no spaces before and after opening and closing parentheses.</dd>
+              <dt id="commas">Commas</dt>
+              <dd>There should be a space after every comma.</dd>
+              </dl>
+            </section>
+            <section id="naming">
+              <div class="page-header">
+                <h1>Naming</h1>
+              </div>
+              <p>We follow naming conventions used by the standard library.</p>
+              <dl>
+              <dt id="types">Types</dt>
+              <dd>Types should be named as nouns, are in all-lowercase characters, and have words separated by underscores.</dd>
+              <dt id="template-parameters">Template Parameters</dt>
+              <dd>Template parameter names should be general nouns, should start with an uppercase character, and have words concatenated each starting with uppercase characters.</dd>
+              <dt id="functions">Functions</dt>
+              <dd>Functions should be verbs, are in all-lowercase characters, and have words separated by underscores.</dd>
+              <dt id="macros">Macros</dt>
+              <dd>Macros should be all-uppercase characters, start with <code>NETWORK</code> and have words separated by underscores.</dd>
+              </dl>
+            </section>
+            <section id="features">
+              <div class="page-header">
+                <h1>Features</h1>
+              </div>
+              <p>We use all the facilities afforded us by C++. In particular, the most current C++ standard is the one we code against.</p>
+            </section>
+            <section id="organization">
+              <div class="page-header">
+                <h1>Organization</h1>
+              </div>
+              <p>We organize the whole library in namespaces, and where appropriate as macro's and static class members.</p>
+              <dl>
+              <dt id="constants">Constants</dt>
+              <dd>Prefer constants be defined as static class members, function-local static variables, enum classes, scoped enums, then macro's in that order.</dd>
+              <dt id="details">Details</dt>
+              <dd>Parts of the implementation considered as "implementation details" shall live in a nested namespace called <code>impl</code>.</dd>
+              </dl>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <p class="muted credit">Copyright 2012 Dean Michael Berris; Glyn
+        Matthews; Google, Inc.</p>
+        <p class="muted credit">Distributed under the Boost Software License,
+        Version 1.0. (See accompanying file <a
+        href="LICENSE_1_0.txt">LICENSE_1_0.txt</a> or copy at <a
+        href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
+      </div>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
