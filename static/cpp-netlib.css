@@ -1,12 +1,16 @@
-.affix { top: 60px; width: 110px; }
+.affix { top: 60px; width: 263px; }
 .cpp-netlib-navbar { background: black; }
 .jumbotron { background: #FFA800; padding-top: 40px; }
-.jumbotron .container { position: relative; z-index: 2; padding-top: 30px; }
 .subhead { text-align: left; 1px solid #FFA800; }
 .subhead h1 { font-size: 60px; padding-bottom: 10px; }
 .subhead p { margin-bottom: 20px; padding-left: 3px; }
-html, body { height: 100%; }
+html, body { padding-top: 20px; }
 #wrap { min-height: 100%; height: auto !important; height: 100%; margin: 0 auto; }
 #push, #footer { height: 80px;}
 #footer { background-color: #f5f5f5; }
 .credit { text-align: center; }
+.cpp-netlib-hash { font-size: 11px; }
+.list-group-item a:link {color: black; }
+.list-group-item a:visited {color: black; }
+.list-group-item a:hover {color: black; }
+.list-group-item a:active {color: black; }

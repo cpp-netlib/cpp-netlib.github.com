@@ -2,40 +2,45 @@
 <html lang="en">
   <head>
     <title>cpp-netlib: Proposals</title>
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
     <link href="static/cpp-netlib.css" rel="stylesheet">
   </head>
-  <body data-spy="scroll" data-target=".cpp-netlib-docs-sidebar">
-    <div id="wrap">
-      <div class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar">
-        <div class="container">
-          <ul class="nav">
-            <li><a class="brand" href="index.html">cpp-netlib</a></li>
-            <li><a href="process.html">Development Process</a></li>
-            <li><a href="style-guide.html">Style Guide</a></li>
-            <li class="active"><a href="proposals.html">Proposals</a></li>
-          </ul>
-        </div>
-      </div>
-      <header class="jumbotron subhead">
-        <div class="container">
-          <h1>Proposals</h1>
-          <p class="lead">Getting new libraries into <code>cpp-netlib.</code></p>
-        </div>
-      </header>
+  <body data-spy="scroll" data-target="#cpp-netlib-docs-sidebar">
+    <div class="row" id="wrap">
       <div class="container">
+        <nav class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#">cpp-netlib</a>
+            </div>
+            <div>
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="process.html">Development Process</a></li>
+              <li><a href="style-guide.html">Style Guide</a></li>
+              <li class="active"><a href="proposals.html">Proposals</a></li>
+            </ul>
+            </div>
+          </div>
+        </nav>
+        <header class="jumbotron subhead">
+          <div class="container">
+            <h1>Proposals</h1>
+            <p class="lead">Getting new libraries into <code>cpp-netlib.</code></p>
+          </div>
+        </header>
         <div class="row">
-          <div class="span2 cpp-netlib-docs-sidebar">
-            <ul class="nav nav-list" data-spy="affix" data-offset-top="150">
-              <li><a href="#overview">Overview</a></li>
-              <li><a href="#preparation">Preparation</a></li>
-              <li><a href="#discussion">Discussion</a></li>
-              <li><a href="#collaboration">Collaboration</a></li>
-              <li><a href="#inclusion">Inclusion</a></li>
+          <div class="col-md-3" id="cpp-netlib-docs-sidebar" role="complimentary">
+            <ul class="nav list-group cpp-netlib-sidebar" data-spy="affix" data-offset-top="245">
+              <li class="list-group-item"><a href="#overview">Overview</a></li>
+              <li class="list-group-item"><a href="#preparation">Preparation</a></li>
+              <li class="list-group-item"><a href="#discussion">Discussion</a></li>
+              <li class="list-group-item"><a href="#collaboration">Collaboration</a></li>
+              <li class="list-group-item"><a href="#inclusion">Inclusion</a></li>
             </ul>
           </div>
-          <div class="span9">
+          <div class="col-md-9">
             <section id="overview">
               <div class="page-header">
                 <h1>Overview</h1>
@@ -200,8 +205,8 @@
         href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
       </div>
     </footer>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-19815738-1']);
