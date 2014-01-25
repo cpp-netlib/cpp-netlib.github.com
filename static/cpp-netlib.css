@@ -9,7 +9,7 @@ html, body { padding-top: 20px; }
 #push, #footer { height: 80px;}
 #footer { background-color: #f5f5f5; }
 .credit { text-align: center; }
-.cpp-netlib-hash { font-size: 11px; }
+.cpp-netlib-hash { font-size: 11px; text-align: center; }
 .list-group-item a:link {color: black; }
 .list-group-item a:visited {color: black; }
 .list-group-item a:hover {color: black; }
