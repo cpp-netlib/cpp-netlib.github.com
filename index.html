@@ -1,182 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <title>cpp-netlib: The C++ Network Library</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/cpp-netlib.css">
-  </head>
-  <body data-spy="scroll" data-target="#cpp-netlib-docs-sidebar">
+</head>
+
+<body data-spy="scroll" data-target="#cpp-netlib-docs-sidebar">
     <div class="row" id="wrap">
-      <div class="container">
-        <nav class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar" role="navigation">
-          <div class="container">
-            <div class="navbar-header">
-              <a class="navbar-brand" href="#">cpp-netlib</a>
+        <div class="container">
+            <nav class="navbar navbar-fixed-top navbar-inverse cpp-netlib-navbar" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">cpp-netlib</a>
+                    </div>
+                    <div>
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="index.html">Home</a></li>
+                            <li><a href="process.html">Development Process</a></li>
+                            <li><a href="style-guide.html">Style Guide</a></li>
+                            <li><a href="proposals.html">Proposals</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <header class="jumbotron subhead">
+                <h1>The C++ Network Library Project</h1>
+                <p class="lead">A collection of open-source libraries for high level network programming.</p>
+            </header>
+            <div class="row">
+                <div class="col-md-3" id="cpp-netlib-docs-sidebar" role="complimentary">
+                    <ul class="nav list-group cpp-netlib-sidebar" data-spy="affix" data-offset-top="245">
+                        <li class="list-group-item"><a href="#overview">Overview</a></li>
+                        <li class="list-group-item"><a href="#download">Download</a></li>
+                        <li class="list-group-item"><a href="#documentation">Documentation</a></li>
+                        <li class="list-group-item"><a href="#support">Support</a></li>
+                        <li class="list-group-item"><a href="#policies">Project Policies</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-9">
+                    <section id="overview">
+                        <div class="page-header">
+                            <h1>Overview</h1>
+                        </div>
+                        <p>The project aims to build upon the latest C++ standard (currently C++11) to provide easy to use libraries for network programming. We use the latest compiler versions and features with an eye on pushing the boundaries on leveraging what's available in C++.</p>
+                        <p>Currently the library contains an HTTP client and server implementation, a stand-alone URI library, a network message framework, and some concurrency tools.</p>
+                        <p>The project welcomes contributions from people interested in joining the effort. See the section on <a href="#policies">Project Policies</a> for more information on getting involved.</p>
+                        <div class="g-plusone" data-annotation="inline" data-width="300"></div>
+                        <script type="text/javascript">
+                            (function() {
+                                var po = document.createElement('script');
+                                po.type = 'text/javascript';
+                                po.async = true;
+                                po.src = 'https://apis.google.com/js/platform.js';
+                                var s = document.getElementsByTagName('script')[0];
+                                s.parentNode.insertBefore(po, s);
+                            })();
+                        </script>
+                    </section>
+                    <section id="download">
+                        <div class="page-header">
+                            <h1>Download</h1>
+                        </div>
+                        <p>The current <strong>stable release</strong> of the library is available in three formats, please pick one of the three:</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.zip" class="btn btn-primary btn-lg btn-block">0.12.0-final (zip)</a>
+                                <br>
+                                <small class="text-muted cpp-netlib-hash">md5: 19af754d82e0f3d3d67a456830a88861</small>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.gz" class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.gz)</a>
+                                <br>
+                                <small class="text-muted cpp-netlib-hash">md5: 29b87c0e8c1a9e7fbdea5afcec947d53</small>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.bz2" class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.bz2)</a>
+                                <br>
+                                <small class="text-muted cpp-netlib-hash">md5: 25d1a0bfa088ad4cede998c52fec7b91</small>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="documentation">
+                        <div class="page-header">
+                            <h1>Documentation</h1>
+                        </div>
+                        <p>We make the documentation for supported releases of the library available through the following links.</p>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="0.12.0/index.html" class="btn btn-primary btn-lg btn-block">0.12.0 (stable)</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="0.11.2/index.html" class="btn btn-warning btn-lg btn-block">0.11.2 (previous stable)</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="0.10.1/index.html" class="btn btn-danger btn-lg btn-block">0.10.1 (previous unsupported)</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="support">
+                        <div class="page-header">
+                            <h1>Support</h1>
+                        </div>
+                        <p>We offer two avenues of support for user issues, depending on what kind of issues you're encountering.</p>
+                        <h2>Reporting Bugs</h2>
+                        <p>If you're using the library and would like to report issues with the library, please file your bug reports and support requests in the official issue tracker.</p>
+                        <p><a href="https://github.com/cpp-netlib/cpp-netlib/issues" class="btn btn-danger btn-large">File Bugs</a></p>
+                        <h2>Developer Support</h2>
+                        <p>If you're interested in contributing to the development or if you have questions directly involving the implementation or for general discussion of the project, you can subscribe to and discuss with us through the developers mailing list.</p>
+                        <p><a href="https://groups.google.com/group/cpp-netlib" class="btn btn-success btn-large">Discussion Group</a></p>
+                    </section>
+                    <section id="policies">
+                        <div class="page-header">
+                            <h1>Project Policies</h1>
+                        </div>
+                        <p>The project welcomes contributors and starting with 2013, we've resolved to document as much of the policies we follow in the project as we can. Please follow the links below for more information.
+                        </p>
+                        <ul>
+                            <li><a href="process.html">Development Process</a></li>
+                            <li><a href="style-guide.html">Style Guide</a></li>
+                            <li><a href="proposals.html">Proposing New Libraries</a></li>
+                        </ul>
+                    </section>
+                </div>
             </div>
-            <div>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="index.html">Home</a></li>
-              <li><a href="process.html">Development Process</a></li>
-              <li><a href="style-guide.html">Style Guide</a></li>
-              <li><a href="proposals.html">Proposals</a></li>
-            </ul>
-            </div>
-          </div>
-        </nav>
-        <header class="jumbotron subhead">
-        <h1>The C++ Network Library Project</h1>
-        <p class="lead">A collection of open-source libraries for high level network programming.</p>
-        </header>
-        <div class="row">
-          <div class="col-md-3" id="cpp-netlib-docs-sidebar" role="complimentary">
-            <ul class="nav list-group cpp-netlib-sidebar" data-spy="affix" data-offset-top="245">
-              <li class="list-group-item"><a href="#overview">Overview</a></li>
-              <li class="list-group-item"><a href="#download">Download</a></li>
-              <li class="list-group-item"><a href="#documentation">Documentation</a></li>
-              <li class="list-group-item"><a href="#support">Support</a></li>
-              <li class="list-group-item"><a href="#policies">Project Policies</a></li>
-            </ul>
-          </div>
-          <div class="col-md-9">
-            <section id="overview">
-              <div class="page-header">
-                <h1>Overview</h1>
-              </div>
-              <p>The project aims to build upon the latest C++ standard
-              (currently C++11) to provide easy to use libraries for network
-              programming. We use the latest compiler versions and features
-              with an eye on pushing the boundaries on leveraging what's
-              available in C++.</p>
-              <p>Currently the library contains an HTTP client and server
-              implementation, a stand-alone URI library, a network message
-              framework, and some concurrency tools.</p>
-              <p>The project welcomes contributions from people interested in
-              joining the effort. See the section on <a
-              href="#policies">Project Policies</a> for more information on
-              getting involved.</p>
-              <div class="g-plusone" data-annotation="inline" data-width="300"></div>
-     <script type="text/javascript">
-  (function() {
-       var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-           po.src = 'https://apis.google.com/js/platform.js';
-               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                 })();
-     </script>
-            </section>
-            <section id="download">
-              <div class="page-header">
-                <h1>Download</h1>
-              </div>
-	      <p>The current <strong>stable release</strong> of the library is available in three
-              formats, please pick one of the three:</p>
-              <div class="row">
-                <div class="col-md-4">
-                <a
-                  href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.zip"
-                  class="btn btn-primary btn-lg btn-block">0.12.0-final (zip)</a>
-                  <br>
-                  <small class="text-muted cpp-netlib-hash">md5: 19af754d82e0f3d3d67a456830a88861</small>
-                </div>
-                <div class="col-md-4">
-                <a
-                  href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.gz"
-                  class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.gz)</a>
-                  <br>
-                  <small class="text-muted cpp-netlib-hash">md5: 29b87c0e8c1a9e7fbdea5afcec947d53</small>
-                </div>
-                <div class="col-md-4">
-                <a
-                  href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.bz2"
-                  class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.bz2)</a>
-                  <br>
-                  <small class="text-muted cpp-netlib-hash">md5: 25d1a0bfa088ad4cede998c52fec7b91</small>
-                </div>
-              </div>
-            </section>
-            <section id="documentation">
-              <div class="page-header">
-                <h1>Documentation</h1>
-              </div>
-              <p>We make the documentation for supported releases of the
-              library available through the following links.</p>
-              <div class="row">
-                <div class="col-md-4">
-                  <a href="0.12.0/index.html" class="btn btn-primary btn-lg btn-block">0.12.0 (stable)</a>
-                </div>
-                <div class="col-md-4">
-                  <a href="0.11.2/index.html" class="btn btn-warning btn-lg btn-block">0.11.2 (previous stable)</a>
-                </div>
-                <div class="col-md-4">
-                  <a href="0.10.1/index.html" class="btn btn-danger btn-lg btn-block">0.10.1 (previous unsupported)</a>
-                </div>
-              </div>
-            </section>
-            <section id="support">
-              <div class="page-header">
-                <h1>Support</h1>
-              </div>
-              <p>We offer two avenues of support for user issues, depending on
-              what kind of issues you're encountering.</p>
-              <h2>Reporting Bugs</h2>
-              <p>If you're using the library and would like to report issues
-              with the library, please file your bug reports and support
-              requests in the official issue tracker.</p>
-              <p><a href="https://github.com/cpp-netlib/cpp-netlib/issues"
-              class="btn btn-danger btn-large">File Bugs</a></p>
-              <h2>Developer Support</h2>
-              <p>If you're interested in contributing to the development or if
-              you have questions directly involving the implementation or for
-              general discussion of the project, you can subscribe to and
-              discuss with us through the developers mailing list.</p>
-              <p><a
-              href="https://groups.google.com/group/cpp-netlib"
-              class="btn btn-success btn-large">Discussion Group</a></p>
-            </section>
-            <section id="policies">
-              <div class="page-header">
-                <h1>Project Policies</h1>
-              </div>
-              <p>The project welcomes contributors and starting with 2013,
-              we've resolved to document as much of the policies we follow in
-              the project as we can. Please follow the links below for more
-              information.</p>
-              <ul>
-              <li><a href="process.html">Development Process</a></li>
-              <li><a href="style-guide.html">Style Guide</a></li>
-              <li><a href="proposals.html">Proposing New Libraries</a></li>
-              </ul>
-            </section>
-          </div>
         </div>
-      </div>
     </div>
     <div id="footer">
-      <div class="container">
-        <p class="text-muted credit">Copyright 2012-2013 Dean Michael Berris; Glyn
-        Matthews; 2013 Google, Inc.</p>
-        <p class="text-muted credit">Distributed under the Boost Software License,
-        Version 1.0. (See accompanying file <a
-        href="LICENSE_1_0.txt">LICENSE_1_0.txt</a> or copy at <a
-        href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
-      </div>
+        <div class="container">
+            <p class="text-muted credit">Copyright 2012-2013 Dean Michael Berris; Glyn Matthews; 2013 Google, Inc.</p>
+            <p class="text-muted credit">Distributed under the Boost Software License, Version 1.0. (See accompanying file <a href="LICENSE_1_0.txt">LICENSE_1_0.txt</a> or copy at <a href="http://www.boost.org/LICENSE_1_0.txt">http://www.boost.org/LICENSE_1_0.txt</a>)</p>
+        </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"></script>
     <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-19815738-1']);
-      _gaq.push(['_trackPageview']);
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-19815738-1']);
+        _gaq.push(['_trackPageview']);
 
-      (function() {
-       var ga = document.createElement('script'); ga.type =
-       'text/javascript'; ga.async = true;
-       ga.src = ('https:' == document.location.protocol ?
-         'https://ssl' : 'http://www') +
-       '.google-analytics.com/ga.js';
-       var s = document.getElementsByTagName('script')[0];
-       s.parentNode.insertBefore(ga, s);
-       })();
-     </script>
-  </body>
+        (function() {
+            var ga = document.createElement('script');
+            ga.type =
+                'text/javascript';
+            ga.async = true;
+            ga.src = ('https:' == document.location.protocol ?
+                    'https://ssl' : 'http://www') +
+                '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+</body>
+
 </html>
