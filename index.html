@@ -31,16 +31,7 @@
                 <p class="lead">A collection of open-source libraries for high level network programming.</p>
             </header>
             <div class="row">
-                <div class="col-md-3" id="cpp-netlib-docs-sidebar" role="complimentary">
-                    <ul class="nav list-group cpp-netlib-sidebar" data-spy="affix" data-offset-top="245">
-                        <li class="list-group-item"><a href="#overview">Overview</a></li>
-                        <li class="list-group-item"><a href="#download">Download</a></li>
-                        <li class="list-group-item"><a href="#documentation">Documentation</a></li>
-                        <li class="list-group-item"><a href="#support">Support</a></li>
-                        <li class="list-group-item"><a href="#policies">Project Policies</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-9">
+                <div class="col-md-10 col-md-offset-1">
                     <section id="overview">
                         <div class="page-header">
                             <h1>Overview</h1>
@@ -64,7 +55,7 @@
                         <div class="page-header">
                             <h1>Download</h1>
                         </div>
-                        <p>The current <strong>beta release</strong> of the library is available in three formats, please pick one of the three:</p>
+                        <h2>Beta</h2>
                         <div class="row">
                             <div class="col-md-4">
                                 <a href="http://downloads.cpp-netlib.org/0.13.0/cpp-netlib-0.13.0-rc0.zip" class="btn btn-primary btn-lg btn-block">0.13.0-rc0 (zip)</a>
@@ -82,30 +73,45 @@
                                 <small class="text-muted cpp-netlib-hash">md5: e1a6f78df1dd1a45c3fd26647baf7b9e</small>
                             </div>
                         </div>
-                        <p>The current <strong>stable release</strong> of the library is available in three formats, please pick one of the three:</p>
+                        <h2>Stable</h2>
                         <div class="row">
                             <div class="col-md-4">
-                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.zip" class="btn btn-primary btn-lg btn-block">0.12.0-final (zip)</a>
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.zip" class="btn btn-success btn-lg btn-block">0.12.0-final (zip)</a>
                                 <br>
                                 <small class="text-muted cpp-netlib-hash">md5: 19af754d82e0f3d3d67a456830a88861</small>
                             </div>
                             <div class="col-md-4">
-                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.gz" class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.gz)</a>
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.gz" class="btn btn-success btn-lg btn-block">0.12.0-final (tar.gz)</a>
                                 <br>
                                 <small class="text-muted cpp-netlib-hash">md5: 29b87c0e8c1a9e7fbdea5afcec947d53</small>
                             </div>
                             <div class="col-md-4">
-                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.bz2" class="btn btn-primary btn-lg btn-block">0.12.0-final (tar.bz2)</a>
+                                <a href="http://downloads.cpp-netlib.org/0.12.0/cpp-netlib-0.12.0-final.tar.bz2" class="btn btn-success btn-lg btn-block">0.12.0-final (tar.bz2)</a>
                                 <br>
                                 <small class="text-muted cpp-netlib-hash">md5: 25d1a0bfa088ad4cede998c52fec7b91</small>
                             </div>
                         </div>
                     </section>
+                    <section id="support">
+                        <div class="page-header">
+                            <h1>Support</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <a href="http://slack.cpp-netlib.org/" class="btn btn-primary btn-lg btn-block">Join us on Slack</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="https://github.com/cpp-netlib/cpp-netlib/issues" class="btn btn-danger btn-lg btn-block">GitHub Issues</a>
+                            </div>
+                            <div class="col-md-4">
+                                <a href="https://groups.google.com/group/cpp-netlib" class="btn btn-success btn-lg btn-block">Mailing List</a>
+                            </div>
+                        </div>
+                    </section>
                     <section id="documentation">
                         <div class="page-header">
-                            <h1>Documentation</h1>
+                            <h1>Docs</h1>
                         </div>
-                        <p>We make the documentation for supported releases of the library available through the following links.</p>
                         <div class="row">
                             <div class="col-md-4">
                                 <a href="0.12.0/index.html" class="btn btn-primary btn-lg btn-block">0.12.0 (stable)</a>
@@ -114,19 +120,6 @@
                                 <a href="0.13.0/index.html" class="btn btn-primary btn-lg btn-block">0.13.0 (beta)</a>
                             </div>
                         </div>
-                    </section>
-                    <section id="support">
-                        <div class="page-header">
-                            <h1>Support</h1>
-                        </div>
-                        <h2>Join us on Slack!</h2>
-                        <p><a href="http://slack.cpp-netlib.org/" class="btn btn-block">cpp-netlib Slack</a></p>
-                        <h2>Reporting Bugs</h2>
-                        <p>If you're using the library and would like to report issues with the library, please file your bug reports and support requests in the official issue tracker.</p>
-                        <p><a href="https://github.com/cpp-netlib/cpp-netlib/issues" class="btn btn-danger btn-large">File Bugs</a></p>
-                        <h2>Developer Support</h2>
-                        <p>If you're interested in contributing to the development or if you have questions directly involving the implementation or for general discussion of the project, you can subscribe to and discuss with us through the developers mailing list.</p>
-                        <p><a href="https://groups.google.com/group/cpp-netlib" class="btn btn-success btn-large">Discussion Group</a></p>
                     </section>
                     <section id="policies">
                         <div class="page-header">
