@@ -6,6 +6,15 @@
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="static/cpp-netlib.css">
+    <script>
+        click = () => {
+            if (window.location.href="https://cpp-netlib.org/") {
+                // Don't do anything
+            } else {
+                window.open("https://cpp-netlib.org/","_self")
+            }
+        }
+    </script>
 </head>
 
 <body data-spy="scroll" data-target="#cpp-netlib-docs-sidebar">
@@ -18,7 +27,7 @@
                     </div>
                     <div>
                         <ul class="nav navbar-nav">
-                            <li class="active"><a href="index.html">Home</a></li>
+                            <li class="active"><a onclick="check()">Home</a></li>
                             <li><a href="process.html">Development Process</a></li>
                             <li><a href="style-guide.html">Style Guide</a></li>
                             <li><a href="proposals.html">Proposals</a></li>
